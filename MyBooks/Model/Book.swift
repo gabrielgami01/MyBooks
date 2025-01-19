@@ -30,7 +30,7 @@ final class Book {
             case .inProgress:
                 "book.fill"
             case .completed:
-                "book.vertical.fill"
+                "book.closed.fill"
         }
     }
 }
