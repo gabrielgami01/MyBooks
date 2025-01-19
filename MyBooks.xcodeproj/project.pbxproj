@@ -19,6 +19,7 @@
 		FCF58FB02D3D3E14007E1147 /* SwiftDataViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF58FAF2D3D3E02007E1147 /* SwiftDataViewer.swift */; };
 		FCF58FB42D3D40ED007E1147 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF58FB32D3D40ED007E1147 /* AddBookView.swift */; };
 		FCF58FB62D3D4157007E1147 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF58FB52D3D4152007E1147 /* PreviewData.swift */; };
+		FCF58FBB2D3D9D73007E1147 /* AddBookVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF58FBA2D3D9D6E007E1147 /* AddBookVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FCF58FAF2D3D3E02007E1147 /* SwiftDataViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataViewer.swift; sourceTree = "<group>"; };
 		FCF58FB32D3D40ED007E1147 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		FCF58FB52D3D4152007E1147 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		FCF58FBA2D3D9D6E007E1147 /* AddBookVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FCF403B72D3D233000843886 /* Views */,
+				FCF58FB92D3D9D65007E1147 /* ViewModel */,
 				FCF403BB2D3D23DB00843886 /* Model */,
 				FCF403B52D3D231600843886 /* System */,
 				FCF403A42D3D230200843886 /* Preview Content */,
@@ -164,6 +167,14 @@
 				FCF403BC2D3D23E000843886 /* Book.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FCF58FB92D3D9D65007E1147 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCF58FBA2D3D9D6E007E1147 /* AddBookVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCF58FB42D3D40ED007E1147 /* AddBookView.swift in Sources */,
+				FCF58FBB2D3D9D73007E1147 /* AddBookVM.swift in Sources */,
 				FCF403A92D3D230200843886 /* BookListView.swift in Sources */,
 				FCF58FB02D3D3E14007E1147 /* SwiftDataViewer.swift in Sources */,
 				FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */,

@@ -5,26 +5,25 @@ struct AddBookView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     
-    @State private var title = ""
-    @State private var author = ""
+    @State private var addBookVM = AddBookVM()
     
     var body: some View {
         Form {
-            TextField("Book Title", text: $title)
+            TextField("Book Title", text: $addBookVM.title)
             
-            TextField("Author", text: $author)
+            TextField("Author", text: $addBookVM.author)
             
             Button {
-                let newBook = Book(title: title, author: author)
-                context.insert(newBook)
-                dismiss()
+                if addBookVM.addBook(context: context) {
+                    dismiss()
+                }
             } label: {
                 Text("Create")
             }
             .buttonStyle(.borderedProminent)
             .frame(maxWidth: .infinity, alignment: .trailing)
             .padding(.vertical, 5)
-            .disabled(title.isEmpty || author.isEmpty)
+            .disabled(addBookVM.title.isEmpty || addBookVM.author.isEmpty)
         }
         .navigationTitle("New Book")
         .navigationBarTitleDisplayMode(.inline)
@@ -37,7 +36,7 @@ struct AddBookView: View {
                 }
             }
         }
-                        
+        .alert(addBookVM.alertMsg, isPresented: $addBookVM.showAlert) {}
     }
 }
 
