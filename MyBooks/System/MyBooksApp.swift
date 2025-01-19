@@ -7,7 +7,7 @@ struct MyBooksApp: App {
     
     init() {
         let schema = Schema([Book.self])
-        let config = ModelConfiguration("MyBooks", schema: schema)
+        let config = ModelConfiguration(schema: schema)
         do {
             container = try ModelContainer(for: schema, configurations: config)
         } catch {
@@ -21,5 +21,6 @@ struct MyBooksApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(container)
     }
 }
