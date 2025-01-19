@@ -14,6 +14,7 @@
 		FCF403AF2D3D230500843886 /* MyBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403AD2D3D230500843886 /* MyBooksTests.swift */; };
 		FCF403B32D3D230600843886 /* MyBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403B02D3D230600843886 /* MyBooksUITests.swift */; };
 		FCF403B42D3D230600843886 /* MyBooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403B12D3D230600843886 /* MyBooksUITestsLaunchTests.swift */; };
+		FCF403BD2D3D23E200843886 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403BC2D3D23E000843886 /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		FCF403AD2D3D230500843886 /* MyBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksTests.swift; sourceTree = "<group>"; };
 		FCF403B02D3D230600843886 /* MyBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITests.swift; sourceTree = "<group>"; };
 		FCF403B12D3D230600843886 /* MyBooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCF403BC2D3D23E000843886 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				FCF403B72D3D233000843886 /* Views */,
+				FCF403BB2D3D23DB00843886 /* Model */,
 				FCF403B52D3D231600843886 /* System */,
 				FCF403A42D3D230200843886 /* Preview Content */,
 			);
@@ -141,6 +144,14 @@
 				FCF403A62D3D230200843886 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FCF403BB2D3D23DB00843886 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCF403BC2D3D23E000843886 /* Book.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 			files = (
 				FCF403A92D3D230200843886 /* ContentView.swift in Sources */,
 				FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */,
+				FCF403BD2D3D23E200843886 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
