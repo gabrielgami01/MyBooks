@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FCF403A92D3D230200843886 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A62D3D230200843886 /* ContentView.swift */; };
+		FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A72D3D230200843886 /* MyBooksApp.swift */; };
+		FCF403AB2D3D230200843886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF403A32D3D230200843886 /* Preview Assets.xcassets */; };
+		FCF403AC2D3D230200843886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF403A52D3D230200843886 /* Assets.xcassets */; };
+		FCF403AF2D3D230500843886 /* MyBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403AD2D3D230500843886 /* MyBooksTests.swift */; };
+		FCF403B32D3D230600843886 /* MyBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403B02D3D230600843886 /* MyBooksUITests.swift */; };
+		FCF403B42D3D230600843886 /* MyBooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403B12D3D230600843886 /* MyBooksUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FCF403872D3D193700843886 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,25 +37,14 @@
 		FCF403762D3D193500843886 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403862D3D193700843886 /* MyBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403902D3D193700843886 /* MyBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCF403A32D3D230200843886 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FCF403A52D3D230200843886 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCF403A62D3D230200843886 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FCF403A72D3D230200843886 /* MyBooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksApp.swift; sourceTree = "<group>"; };
+		FCF403AD2D3D230500843886 /* MyBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksTests.swift; sourceTree = "<group>"; };
+		FCF403B02D3D230600843886 /* MyBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITests.swift; sourceTree = "<group>"; };
+		FCF403B12D3D230600843886 /* MyBooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		FCF403782D3D193500843886 /* MyBooks */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyBooks;
-			sourceTree = "<group>";
-		};
-		FCF403892D3D193700843886 /* MyBooksTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyBooksTests;
-			sourceTree = "<group>";
-		};
-		FCF403932D3D193700843886 /* MyBooksUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyBooksUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FCF403732D3D193500843886 /* Frameworks */ = {
@@ -75,9 +74,9 @@
 		FCF4036D2D3D193500843886 = {
 			isa = PBXGroup;
 			children = (
-				FCF403782D3D193500843886 /* MyBooks */,
-				FCF403892D3D193700843886 /* MyBooksTests */,
-				FCF403932D3D193700843886 /* MyBooksUITests */,
+				FCF403A82D3D230200843886 /* MyBooks */,
+				FCF403AE2D3D230500843886 /* MyBooksTests */,
+				FCF403B22D3D230600843886 /* MyBooksUITests */,
 				FCF403772D3D193500843886 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +89,58 @@
 				FCF403902D3D193700843886 /* MyBooksUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FCF403A42D3D230200843886 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FCF403A32D3D230200843886 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FCF403A82D3D230200843886 /* MyBooks */ = {
+			isa = PBXGroup;
+			children = (
+				FCF403B72D3D233000843886 /* Views */,
+				FCF403B52D3D231600843886 /* System */,
+				FCF403A42D3D230200843886 /* Preview Content */,
+			);
+			path = MyBooks;
+			sourceTree = "<group>";
+		};
+		FCF403AE2D3D230500843886 /* MyBooksTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCF403AD2D3D230500843886 /* MyBooksTests.swift */,
+			);
+			path = MyBooksTests;
+			sourceTree = "<group>";
+		};
+		FCF403B22D3D230600843886 /* MyBooksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCF403B02D3D230600843886 /* MyBooksUITests.swift */,
+				FCF403B12D3D230600843886 /* MyBooksUITestsLaunchTests.swift */,
+			);
+			path = MyBooksUITests;
+			sourceTree = "<group>";
+		};
+		FCF403B52D3D231600843886 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				FCF403A72D3D230200843886 /* MyBooksApp.swift */,
+				FCF403A52D3D230200843886 /* Assets.xcassets */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		FCF403B72D3D233000843886 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCF403A62D3D230200843886 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +157,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				FCF403782D3D193500843886 /* MyBooks */,
 			);
 			name = MyBooks;
 			packageProductDependencies = (
@@ -130,9 +178,6 @@
 			dependencies = (
 				FCF403882D3D193700843886 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				FCF403892D3D193700843886 /* MyBooksTests */,
-			);
 			name = MyBooksTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +197,6 @@
 			);
 			dependencies = (
 				FCF403922D3D193700843886 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				FCF403932D3D193700843886 /* MyBooksUITests */,
 			);
 			name = MyBooksUITests;
 			packageProductDependencies = (
@@ -212,6 +254,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF403AB2D3D230200843886 /* Preview Assets.xcassets in Resources */,
+				FCF403AC2D3D230200843886 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF403A92D3D230200843886 /* ContentView.swift in Sources */,
+				FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF403AF2D3D230500843886 /* MyBooksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF403B32D3D230600843886 /* MyBooksUITests.swift in Sources */,
+				FCF403B42D3D230600843886 /* MyBooksUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

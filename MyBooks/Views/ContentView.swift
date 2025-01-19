@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  MyBooks
-//
-//  Created by Gabriel Garcia Millan on 19/1/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
