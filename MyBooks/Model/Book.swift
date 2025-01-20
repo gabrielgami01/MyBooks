@@ -12,7 +12,7 @@ final class Book {
     var rating: Int?
     var status: Status
     
-    init(title: String, author: String, dateAdded: Date = .now, dateStarted: Date = .distantPast, dateCompleted: Date = .distantFuture, summary: String = "", rating: Int? = nil, status: Status = .onShelf) {
+    init(title: String, author: String, dateAdded: Date = .now, dateStarted: Date = .distantPast, dateCompleted: Date = .distantPast, summary: String = "", rating: Int? = nil, status: Status = .onShelf) {
         self.title = title
         self.author = author
         self.dateAdded = dateAdded

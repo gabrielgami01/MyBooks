@@ -13,29 +13,30 @@ struct BookListView: View {
                 if !books.isEmpty {
                     List {
                         ForEach(books) { book in
-                            HStack(alignment: .firstTextBaseline, spacing: 20) {
-                                Image(systemName: book.iconName)
-                                    .imageScale(.large)
-                                
-                                VStack(alignment: .leading) {
-                                    Text(book.title)
-                                        .font(.title2)
+                            NavigationLink(value: book) {
+                                HStack(alignment: .firstTextBaseline, spacing: 20) {
+                                    Image(systemName: book.iconName)
+                                        .imageScale(.large)
                                     
-                                    Text(book.author)
-                                        .foregroundStyle(.secondary)
-                                    
-                                    if let rating = book.rating {
-                                        HStack {
-                                            ForEach(1..<rating, id: \.self) { _ in
-                                                Image(systemName: "star.fill")
-                                                    .imageScale(.small)
-                                                    .foregroundStyle(.yellow)
+                                    VStack(alignment: .leading) {
+                                        Text(book.title)
+                                            .font(.title2)
+                                        
+                                        Text(book.author)
+                                            .foregroundStyle(.secondary)
+                                        
+                                        if let rating = book.rating {
+                                            HStack {
+                                                ForEach(0..<rating, id: \.self) { _ in
+                                                    Image(systemName: "star.fill")
+                                                        .imageScale(.small)
+                                                        .foregroundStyle(.yellow)
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
-                                                                
                         }
                     }
                 } else {
@@ -56,6 +57,9 @@ struct BookListView: View {
             .sheet(isPresented: $showAddBook) {
                 AddBookView()
                     .presentationDetents([.medium])
+            }
+            .navigationDestination(for: Book.self) { book in
+                EditBookView(editBookVM: EditBookVM(book: book))
             }
         }
     }
