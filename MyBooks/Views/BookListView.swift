@@ -38,7 +38,14 @@ struct BookListView: View {
                                 }
                             }
                         }
+                        .onDelete { indexSet in
+                            indexSet.forEach { index in
+                                let book = books[index]
+                                context.delete(book)
+                            }
+                        }
                     }
+
                 } else {
                     ContentUnavailableView("Enter your first book.", systemImage: "book.fill")
                 }
