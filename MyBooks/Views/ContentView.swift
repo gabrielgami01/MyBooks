@@ -6,6 +6,7 @@ struct ContentView: View {
     @Query(sort: \Book.status) private var books: [Book]
     
     @State private var sortOption: SortOption = .title
+    @State private var filter = ""
     @State private var showAddBook: Bool = false
     
     var body: some View {
@@ -18,7 +19,9 @@ struct ContentView: View {
                 }
                 .buttonStyle(.bordered)
 
-                BookListView(sortOption: sortOption)
+                BookListView(sortOption: sortOption, filterString: filter)
+                    .searchable(text: $filter, prompt: "Filter on title or author")
+
             }
             .navigationTitle("MyBooks")
             .toolbar {
