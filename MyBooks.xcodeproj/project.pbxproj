@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC80EF142D4121950097DF1E /* SortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF132D41218E0097DF1E /* SortOption.swift */; };
+		FC80EF162D41229F0097DF1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF152D4122990097DF1E /* ContentView.swift */; };
 		FCF403A92D3D230200843886 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A62D3D230200843886 /* BookListView.swift */; };
 		FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A72D3D230200843886 /* MyBooksApp.swift */; };
 		FCF403AB2D3D230200843886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF403A32D3D230200843886 /* Preview Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC80EF132D41218E0097DF1E /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
+		FC80EF152D4122990097DF1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCF403762D3D193500843886 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403862D3D193700843886 /* MyBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403902D3D193700843886 /* MyBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +166,7 @@
 		FCF403B72D3D233000843886 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC80EF152D4122990097DF1E /* ContentView.swift */,
 				FCF403A62D3D230200843886 /* BookListView.swift */,
 				FCF58FB32D3D40ED007E1147 /* AddBookView.swift */,
 				FCF58FBE2D3DA2B2007E1147 /* EditBookView.swift */,
@@ -172,6 +177,7 @@
 		FCF403BB2D3D23DB00843886 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC80EF132D41218E0097DF1E /* SortOption.swift */,
 				FCF403BC2D3D23E000843886 /* Book.swift */,
 			);
 			path = Model;
@@ -331,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC80EF142D4121950097DF1E /* SortOption.swift in Sources */,
 				FCF58FB42D3D40ED007E1147 /* AddBookView.swift in Sources */,
 				FCF58FBB2D3D9D73007E1147 /* AddBookVM.swift in Sources */,
 				FCF58FBD2D3DA1DB007E1147 /* EditBookVM.swift in Sources */,
@@ -340,6 +347,7 @@
 				FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */,
 				FCF58FBF2D3DA2B3007E1147 /* EditBookView.swift in Sources */,
 				FCF58FB62D3D4157007E1147 /* PreviewData.swift in Sources */,
+				FC80EF162D41229F0097DF1E /* ContentView.swift in Sources */,
 				FCF58FAE2D3D3BBB007E1147 /* PreviewContainer.swift in Sources */,
 				FCF403BD2D3D23E200843886 /* Book.swift in Sources */,
 			);

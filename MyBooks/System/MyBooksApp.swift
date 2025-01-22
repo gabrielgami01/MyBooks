@@ -19,7 +19,7 @@ struct MyBooksApp: App {
     
     var body: some Scene {
         WindowGroup {
-            BookListView()
+            ContentView()
         }
         .modelContainer(container)
     }
