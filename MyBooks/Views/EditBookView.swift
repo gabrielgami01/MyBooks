@@ -74,13 +74,22 @@ struct EditBookView: View {
                 LabeledContent {
                     TextField("", text: $editBookVM.title)
                 } label: {
-                    Text("Title").foregroundStyle(.secondary)
+                    Text("Title")
+                        .foregroundStyle(.secondary)
                 }
                 
                 LabeledContent {
                     TextField("", text: $editBookVM.author)
                 } label: {
-                    Text("Author").foregroundStyle(.secondary)
+                    Text("Author")
+                        .foregroundStyle(.secondary)
+                }
+                
+                LabeledContent {
+                    TextField("", text: $editBookVM.recommendedBy)
+                } label: {
+                    Text("Recommended by")
+                        .foregroundStyle(.secondary)
                 }
             }
             .textFieldStyle(.roundedBorder)

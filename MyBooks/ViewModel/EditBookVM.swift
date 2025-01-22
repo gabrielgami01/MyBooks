@@ -13,6 +13,7 @@ final class EditBookVM {
     var dateAdded = Date.distantPast
     var dateStarted = Date.distantPast
     var dateCompleted = Date.distantPast
+    var recommendedBy = ""
     
     var changed: Bool {
         status != Status(rawValue: book.status)
@@ -23,6 +24,7 @@ final class EditBookVM {
         || dateAdded != book.dateAdded
         || dateStarted != book.dateStarted
         || dateCompleted != book.dateCompleted
+        || recommendedBy != book.recommendedBy
     }
             
     
@@ -40,6 +42,7 @@ final class EditBookVM {
         self.dateAdded = book.dateAdded
         self.dateStarted = book.dateStarted
         self.dateCompleted = book.dateCompleted
+        self.recommendedBy = book.recommendedBy
     }
     
     func updateBook() {
@@ -51,6 +54,7 @@ final class EditBookVM {
         book.dateAdded = dateAdded
         book.dateStarted = dateStarted
         book.dateCompleted = dateCompleted
+        book.recommendedBy = recommendedBy
     }
     
 }
