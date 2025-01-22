@@ -13,7 +13,7 @@ struct EditBookView: View {
                 Text("Status")
                 Picker("Status", selection: $editBookVM.status) {
                     ForEach(Status.allCases) { status in
-                        Text(status.rawValue)
+                        Text(status.descr)
                             .tag(status)
                     }
                 }

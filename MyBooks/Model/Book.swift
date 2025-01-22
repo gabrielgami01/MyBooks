@@ -10,7 +10,7 @@ final class Book {
     var dateCompleted: Date
     var summary: String
     var rating: Int?
-    var status: Status
+    var status: Status.RawValue
     
     init(title: String, author: String, dateAdded: Date = .now, dateStarted: Date = .distantPast, dateCompleted: Date = .distantPast, summary: String = "", rating: Int? = nil, status: Status = .onShelf) {
         self.title = title
@@ -20,11 +20,11 @@ final class Book {
         self.dateCompleted = dateCompleted
         self.summary = summary
         self.rating = rating
-        self.status = status
+        self.status = status.rawValue
     }
     
     var iconName: String {
-        switch status {
+        switch Status(rawValue: status)! {
             case .onShelf:
                 "checkmark.diamond.fill"
             case .inProgress:
@@ -35,12 +35,19 @@ final class Book {
     }
 }
 
-enum Status: String, Codable, Identifiable, CaseIterable {
-    case onShelf = "On Shelf"
-    case inProgress = "In Progress"
-    case completed = "Completed"
-    
+enum Status: Int, Codable, Identifiable, CaseIterable {
+    case onShelf, inProgress, completed
     var id: Self {
         self
+    }
+    var descr: String {
+        switch self {
+        case .onShelf:
+            "On Shelf"
+        case .inProgress:
+            "In Progress"
+        case .completed:
+            "Completed"
+        }
     }
 }
