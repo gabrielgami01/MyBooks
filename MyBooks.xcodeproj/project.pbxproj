@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FC80EF142D4121950097DF1E /* SortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF132D41218E0097DF1E /* SortOption.swift */; };
 		FC80EF162D41229F0097DF1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF152D4122990097DF1E /* ContentView.swift */; };
+		FC80EF182D41862B0097DF1E /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF172D4186280097DF1E /* Quote.swift */; };
+		FC80EF1A2D4186E10097DF1E /* QuotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF192D4186E10097DF1E /* QuotesListView.swift */; };
+		FC80EF1C2D4187770097DF1E /* QuotesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF1B2D4187740097DF1E /* QuotesVM.swift */; };
 		FCF403A92D3D230200843886 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A62D3D230200843886 /* BookListView.swift */; };
 		FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A72D3D230200843886 /* MyBooksApp.swift */; };
 		FCF403AB2D3D230200843886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF403A32D3D230200843886 /* Preview Assets.xcassets */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		FC80EF132D41218E0097DF1E /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
 		FC80EF152D4122990097DF1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FC80EF172D4186280097DF1E /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		FC80EF192D4186E10097DF1E /* QuotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesListView.swift; sourceTree = "<group>"; };
+		FC80EF1B2D4187740097DF1E /* QuotesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesVM.swift; sourceTree = "<group>"; };
 		FCF403762D3D193500843886 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403862D3D193700843886 /* MyBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403902D3D193700843886 /* MyBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +176,7 @@
 				FCF403A62D3D230200843886 /* BookListView.swift */,
 				FCF58FB32D3D40ED007E1147 /* AddBookView.swift */,
 				FCF58FBE2D3DA2B2007E1147 /* EditBookView.swift */,
+				FC80EF192D4186E10097DF1E /* QuotesListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,8 +184,9 @@
 		FCF403BB2D3D23DB00843886 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FC80EF132D41218E0097DF1E /* SortOption.swift */,
 				FCF403BC2D3D23E000843886 /* Book.swift */,
+				FC80EF172D4186280097DF1E /* Quote.swift */,
+				FC80EF132D41218E0097DF1E /* SortOption.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 			children = (
 				FCF58FBA2D3D9D6E007E1147 /* AddBookVM.swift */,
 				FCF58FBC2D3DA1D1007E1147 /* EditBookVM.swift */,
+				FC80EF1B2D4187740097DF1E /* QuotesVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -343,12 +352,15 @@
 				FCF58FBD2D3DA1DB007E1147 /* EditBookVM.swift in Sources */,
 				FCF403A92D3D230200843886 /* BookListView.swift in Sources */,
 				FCF58FB02D3D3E14007E1147 /* SwiftDataViewer.swift in Sources */,
+				FC80EF1A2D4186E10097DF1E /* QuotesListView.swift in Sources */,
 				FCF58FC22D3DA413007E1147 /* RatingComponent.swift in Sources */,
 				FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */,
 				FCF58FBF2D3DA2B3007E1147 /* EditBookView.swift in Sources */,
 				FCF58FB62D3D4157007E1147 /* PreviewData.swift in Sources */,
 				FC80EF162D41229F0097DF1E /* ContentView.swift in Sources */,
 				FCF58FAE2D3D3BBB007E1147 /* PreviewContainer.swift in Sources */,
+				FC80EF1C2D4187770097DF1E /* QuotesVM.swift in Sources */,
+				FC80EF182D41862B0097DF1E /* Quote.swift in Sources */,
 				FCF403BD2D3D23E200843886 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

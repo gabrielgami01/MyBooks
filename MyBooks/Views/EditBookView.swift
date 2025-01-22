@@ -106,6 +106,16 @@ struct EditBookView: View {
                             .stroke(.tertiary, lineWidth: 1)
                     }
             }
+            
+            NavigationLink {
+                QuotesListView(quotesVM: QuotesVM(book: editBookVM.book))
+            } label: {
+                let count = editBookVM.book.quotes?.count ?? 0
+                Label("^[\(count) Quotes](inflect: true)", systemImage: "quote.opening")
+            }
+            .buttonStyle(.bordered)
+            .frame(maxWidth: .infinity, alignment: .trailing)
+                            
         }
         .padding(.horizontal)
         .toolbar {
