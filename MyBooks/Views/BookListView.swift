@@ -34,12 +34,14 @@ struct BookListView: View {
                                 Image(systemName: book.iconName)
                                     .imageScale(.large)
                                 
-                                VStack(alignment: .leading) {
-                                    Text(book.title)
-                                        .font(.title2)
-                                    
-                                    Text(book.author)
-                                        .foregroundStyle(.secondary)
+                                VStack(alignment: .leading, spacing: 5) {
+                                    VStack(alignment: .leading) {
+                                        Text(book.title)
+                                            .font(.title2)
+                                        
+                                        Text(book.author)
+                                            .foregroundStyle(.secondary)
+                                    }
                                     
                                     if let rating = book.rating {
                                         HStack {
@@ -48,6 +50,17 @@ struct BookListView: View {
                                                     .imageScale(.small)
                                                     .foregroundStyle(.yellow)
                                             }
+                                        }
+                                    }
+                                    
+                                    if let genres = book.genres {
+                                        ViewThatFits {
+                                            GenresStack(genres: genres)
+                                            
+                                            ScrollView(.horizontal) {
+                                                GenresStack(genres: genres)
+                                            }
+                                            .scrollIndicators(.hidden)
                                         }
                                     }
                                 }

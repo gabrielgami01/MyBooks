@@ -7,8 +7,10 @@ struct EditBookView: View {
     
     @State var editBookVM: EditBookVM
     
+    @State private var showGenres = false
+    
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 15) {
             HStack {
                 Text("Status")
                 Picker("Status", selection: $editBookVM.status) {
@@ -107,11 +109,30 @@ struct EditBookView: View {
                     }
             }
             
-            NavigationLink {
-                QuotesListView(quotesVM: QuotesVM(book: editBookVM.book))
-            } label: {
-                let count = editBookVM.book.quotes?.count ?? 0
-                Label("^[\(count) Quotes](inflect: true)", systemImage: "quote.opening")
+            if let genres = editBookVM.book.genres {
+                ViewThatFits {
+                    GenresStack(genres: genres)
+                    
+                    ScrollView(.horizontal) {
+                        GenresStack(genres: genres)
+                    }
+                    .scrollIndicators(.hidden)
+                }
+            }
+            
+            HStack {
+                Button {
+                    showGenres.toggle()
+                } label: {
+                    Label("Genres", systemImage: "bookmark.fill")
+                }
+                
+                NavigationLink {
+                    QuotesListView(quotesVM: QuotesVM(book: editBookVM.book))
+                } label: {
+                    let count = editBookVM.book.quotes?.count ?? 0
+                    Label("^[\(count) Quotes](inflect: true)", systemImage: "quote.opening")
+                }
             }
             .buttonStyle(.bordered)
             .frame(maxWidth: .infinity, alignment: .trailing)
@@ -129,6 +150,9 @@ struct EditBookView: View {
                 .buttonStyle(.borderedProminent)
                 .disabled(!editBookVM.changed)
             }
+        }
+        .sheet(isPresented: $showGenres) {
+            GenreListView(genresVM: GenresVM(book: editBookVM.book))
         }
     }
 }

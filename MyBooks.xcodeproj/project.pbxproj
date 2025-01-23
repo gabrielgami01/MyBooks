@@ -15,6 +15,11 @@
 		FCCBE7752D4265B400146B11 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7742D4265B100146B11 /* Genre.swift */; };
 		FCCBE77A2D4266A200146B11 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7792D42669E00146B11 /* Color.swift */; };
 		FCCBE77C2D4266AF00146B11 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE77B2D4266AD00146B11 /* UIColor.swift */; };
+		FCCBE77E2D426B3400146B11 /* GenreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE77D2D426B2800146B11 /* GenreListView.swift */; };
+		FCCBE7802D42738200146B11 /* AddGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE77F2D42737C00146B11 /* AddGenreView.swift */; };
+		FCCBE7822D42743A00146B11 /* AddGenreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7812D42743300146B11 /* AddGenreVM.swift */; };
+		FCCBE7842D42762B00146B11 /* GenresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7832D42762700146B11 /* GenresVM.swift */; };
+		FCCBE7862D4278C000146B11 /* GenresStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7852D4278BD00146B11 /* GenresStack.swift */; };
 		FCF403A92D3D230200843886 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A62D3D230200843886 /* BookListView.swift */; };
 		FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A72D3D230200843886 /* MyBooksApp.swift */; };
 		FCF403AB2D3D230200843886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF403A32D3D230200843886 /* Preview Assets.xcassets */; };
@@ -59,6 +64,11 @@
 		FCCBE7742D4265B100146B11 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		FCCBE7792D42669E00146B11 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FCCBE77B2D4266AD00146B11 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		FCCBE77D2D426B2800146B11 /* GenreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListView.swift; sourceTree = "<group>"; };
+		FCCBE77F2D42737C00146B11 /* AddGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGenreView.swift; sourceTree = "<group>"; };
+		FCCBE7812D42743300146B11 /* AddGenreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGenreVM.swift; sourceTree = "<group>"; };
+		FCCBE7832D42762700146B11 /* GenresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresVM.swift; sourceTree = "<group>"; };
+		FCCBE7852D4278BD00146B11 /* GenresStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresStack.swift; sourceTree = "<group>"; };
 		FCF403762D3D193500843886 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403862D3D193700843886 /* MyBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403902D3D193700843886 /* MyBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +203,8 @@
 				FCF58FB32D3D40ED007E1147 /* AddBookView.swift */,
 				FCF58FBE2D3DA2B2007E1147 /* EditBookView.swift */,
 				FC80EF192D4186E10097DF1E /* QuotesListView.swift */,
+				FCCBE77D2D426B2800146B11 /* GenreListView.swift */,
+				FCCBE77F2D42737C00146B11 /* AddGenreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +226,8 @@
 				FCF58FBA2D3D9D6E007E1147 /* AddBookVM.swift */,
 				FCF58FBC2D3DA1D1007E1147 /* EditBookVM.swift */,
 				FC80EF1B2D4187740097DF1E /* QuotesVM.swift */,
+				FCCBE7832D42762700146B11 /* GenresVM.swift */,
+				FCCBE7812D42743300146B11 /* AddGenreVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				FCF58FC12D3DA413007E1147 /* RatingComponent.swift */,
+				FCCBE7852D4278BD00146B11 /* GenresStack.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -363,6 +378,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCBE7842D42762B00146B11 /* GenresVM.swift in Sources */,
+				FCCBE7822D42743A00146B11 /* AddGenreVM.swift in Sources */,
 				FC80EF142D4121950097DF1E /* SortOption.swift in Sources */,
 				FCF58FB42D3D40ED007E1147 /* AddBookView.swift in Sources */,
 				FCF58FBB2D3D9D73007E1147 /* AddBookVM.swift in Sources */,
@@ -380,7 +397,10 @@
 				FCF58FAE2D3D3BBB007E1147 /* PreviewContainer.swift in Sources */,
 				FC80EF1C2D4187770097DF1E /* QuotesVM.swift in Sources */,
 				FC80EF182D41862B0097DF1E /* Quote.swift in Sources */,
+				FCCBE7802D42738200146B11 /* AddGenreView.swift in Sources */,
 				FCF403BD2D3D23E200843886 /* Book.swift in Sources */,
+				FCCBE77E2D426B3400146B11 /* GenreListView.swift in Sources */,
+				FCCBE7862D4278C000146B11 /* GenresStack.swift in Sources */,
 				FCCBE77A2D4266A200146B11 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
