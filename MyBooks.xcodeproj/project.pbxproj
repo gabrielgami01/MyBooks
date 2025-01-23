@@ -20,6 +20,7 @@
 		FCCBE7822D42743A00146B11 /* AddGenreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7812D42743300146B11 /* AddGenreVM.swift */; };
 		FCCBE7842D42762B00146B11 /* GenresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7832D42762700146B11 /* GenresVM.swift */; };
 		FCCBE7862D4278C000146B11 /* GenresStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7852D4278BD00146B11 /* GenresStack.swift */; };
+		FCCBE7892D42CFF100146B11 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCBE7882D42CFF100146B11 /* Launch Screen.storyboard */; };
 		FCF403A92D3D230200843886 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A62D3D230200843886 /* BookListView.swift */; };
 		FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A72D3D230200843886 /* MyBooksApp.swift */; };
 		FCF403AB2D3D230200843886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF403A32D3D230200843886 /* Preview Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		FCCBE7812D42743300146B11 /* AddGenreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGenreVM.swift; sourceTree = "<group>"; };
 		FCCBE7832D42762700146B11 /* GenresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresVM.swift; sourceTree = "<group>"; };
 		FCCBE7852D4278BD00146B11 /* GenresStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresStack.swift; sourceTree = "<group>"; };
+		FCCBE7882D42CFF100146B11 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FCF403762D3D193500843886 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403862D3D193700843886 /* MyBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403902D3D193700843886 /* MyBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 			children = (
 				FCF403A72D3D230200843886 /* MyBooksApp.swift */,
 				FCF403A52D3D230200843886 /* Assets.xcassets */,
+				FCCBE7882D42CFF100146B11 /* Launch Screen.storyboard */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -331,7 +334,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = FCF4036D2D3D193500843886;
 			minimizedProjectReferenceProxies = 1;
@@ -352,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCBE7892D42CFF100146B11 /* Launch Screen.storyboard in Resources */,
 				FCF403AB2D3D230200843886 /* Preview Assets.xcassets in Resources */,
 				FCF403AC2D3D230200843886 /* Assets.xcassets in Resources */,
 			);
@@ -571,8 +574,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,9 +583,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gabrielgarcia.MyBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -600,8 +607,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,9 +616,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gabrielgarcia.MyBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
