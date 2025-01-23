@@ -12,6 +12,9 @@
 		FC80EF182D41862B0097DF1E /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF172D4186280097DF1E /* Quote.swift */; };
 		FC80EF1A2D4186E10097DF1E /* QuotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF192D4186E10097DF1E /* QuotesListView.swift */; };
 		FC80EF1C2D4187770097DF1E /* QuotesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80EF1B2D4187740097DF1E /* QuotesVM.swift */; };
+		FCCBE7752D4265B400146B11 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7742D4265B100146B11 /* Genre.swift */; };
+		FCCBE77A2D4266A200146B11 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE7792D42669E00146B11 /* Color.swift */; };
+		FCCBE77C2D4266AF00146B11 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCBE77B2D4266AD00146B11 /* UIColor.swift */; };
 		FCF403A92D3D230200843886 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A62D3D230200843886 /* BookListView.swift */; };
 		FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF403A72D3D230200843886 /* MyBooksApp.swift */; };
 		FCF403AB2D3D230200843886 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF403A32D3D230200843886 /* Preview Assets.xcassets */; };
@@ -53,6 +56,9 @@
 		FC80EF172D4186280097DF1E /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		FC80EF192D4186E10097DF1E /* QuotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesListView.swift; sourceTree = "<group>"; };
 		FC80EF1B2D4187740097DF1E /* QuotesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesVM.swift; sourceTree = "<group>"; };
+		FCCBE7742D4265B100146B11 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		FCCBE7792D42669E00146B11 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FCCBE77B2D4266AD00146B11 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		FCF403762D3D193500843886 /* MyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403862D3D193700843886 /* MyBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF403902D3D193700843886 /* MyBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FCCBE7762D42668500146B11 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FCCBE77B2D4266AD00146B11 /* UIColor.swift */,
+				FCCBE7792D42669E00146B11 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FCF4036D2D3D193500843886 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +152,7 @@
 				FCF58FC02D3DA40F007E1147 /* Components */,
 				FCF58FB92D3D9D65007E1147 /* ViewModel */,
 				FCF403BB2D3D23DB00843886 /* Model */,
+				FCCBE7762D42668500146B11 /* Extensions */,
 				FCF403B52D3D231600843886 /* System */,
 				FCF403A42D3D230200843886 /* Preview Content */,
 			);
@@ -186,6 +202,7 @@
 			children = (
 				FCF403BC2D3D23E000843886 /* Book.swift */,
 				FC80EF172D4186280097DF1E /* Quote.swift */,
+				FCCBE7742D4265B100146B11 /* Genre.swift */,
 				FC80EF132D41218E0097DF1E /* SortOption.swift */,
 			);
 			path = Model;
@@ -354,14 +371,17 @@
 				FCF58FB02D3D3E14007E1147 /* SwiftDataViewer.swift in Sources */,
 				FC80EF1A2D4186E10097DF1E /* QuotesListView.swift in Sources */,
 				FCF58FC22D3DA413007E1147 /* RatingComponent.swift in Sources */,
+				FCCBE77C2D4266AF00146B11 /* UIColor.swift in Sources */,
 				FCF403AA2D3D230200843886 /* MyBooksApp.swift in Sources */,
 				FCF58FBF2D3DA2B3007E1147 /* EditBookView.swift in Sources */,
+				FCCBE7752D4265B400146B11 /* Genre.swift in Sources */,
 				FCF58FB62D3D4157007E1147 /* PreviewData.swift in Sources */,
 				FC80EF162D41229F0097DF1E /* ContentView.swift in Sources */,
 				FCF58FAE2D3D3BBB007E1147 /* PreviewContainer.swift in Sources */,
 				FC80EF1C2D4187770097DF1E /* QuotesVM.swift in Sources */,
 				FC80EF182D41862B0097DF1E /* Quote.swift in Sources */,
 				FCF403BD2D3D23E200843886 /* Book.swift in Sources */,
+				FCCBE77A2D4266A200146B11 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

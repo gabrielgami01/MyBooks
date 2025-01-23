@@ -13,6 +13,7 @@ final class Book {
     var status: Status.RawValue
     var recommendedBy: String = ""
     @Relationship(deleteRule: .cascade) var quotes: [Quote]?
+    @Relationship(inverse: \Genre.books) var genres: [Genre]?
     
     init(title: String, author: String, dateAdded: Date = .now, dateStarted: Date = .distantPast, dateCompleted: Date = .distantPast, summary: String = "", rating: Int? = nil, status: Status = .onShelf, recommendedBy: String = "") {
         self.title = title
