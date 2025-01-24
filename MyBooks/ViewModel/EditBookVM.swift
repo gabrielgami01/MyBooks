@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PhotosUI
 
 @Observable
 final class EditBookVM {
@@ -15,6 +16,16 @@ final class EditBookVM {
     var dateCompleted = Date.distantPast
     var recommendedBy = ""
     
+    var coverPhotoItem: PhotosPickerItem?
+    var coverData: Data?
+    var coverImage: UIImage? {
+        if let coverData, let image = UIImage(data: coverData) {
+            return image
+        } else {
+            return nil
+        }
+    }
+    
     var changed: Bool {
         status != Status(rawValue: book.status)
         || rating != book.rating
@@ -25,6 +36,7 @@ final class EditBookVM {
         || dateStarted != book.dateStarted
         || dateCompleted != book.dateCompleted
         || recommendedBy != book.recommendedBy
+        || coverData != book.bookCover
     }
             
     
@@ -43,6 +55,7 @@ final class EditBookVM {
         self.dateStarted = book.dateStarted
         self.dateCompleted = book.dateCompleted
         self.recommendedBy = book.recommendedBy
+        self.coverData = book.bookCover
     }
     
     func updateBook() {
@@ -55,6 +68,25 @@ final class EditBookVM {
         book.dateStarted = dateStarted
         book.dateCompleted = dateCompleted
         book.recommendedBy = recommendedBy
+        book.bookCover = coverData
     }
     
+    func convertPhotoItem() async {
+        guard let coverPhotoItem else { return }
+        
+        do {
+            if let result = try await coverPhotoItem.loadTransferable(type: Data.self), let image = UIImage(data: result), let data = image.heicData() {
+                coverData = data
+            } else {
+                coverData = nil
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func unselectCover() {
+        coverPhotoItem = nil
+        coverData = nil
+    }
 }

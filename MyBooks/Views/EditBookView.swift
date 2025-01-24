@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PhotosUI
 
 struct EditBookView: View {
     @Environment(\.modelContext) private var context
@@ -67,24 +68,54 @@ struct EditBookView: View {
             Divider()
             
             VStack {
-                LabeledContent {
-                    RatingComponent(currentRating: $editBookVM.rating)
-                } label: {
-                    Text("Rating")
-                }
-                
-                LabeledContent {
-                    TextField("", text: $editBookVM.title)
-                } label: {
-                    Text("Title")
-                        .foregroundStyle(.secondary)
-                }
-                
-                LabeledContent {
-                    TextField("", text: $editBookVM.author)
-                } label: {
-                    Text("Author")
-                        .foregroundStyle(.secondary)
+                HStack {
+                    PhotosPicker(selection: $editBookVM.coverPhotoItem, matching: .images, photoLibrary: .shared()) {
+                        Group {
+                            if let coverImage = editBookVM.coverImage {
+                                Image(uiImage: coverImage)
+                                    .resizable()
+                                    .scaledToFit()
+                            } else {
+                                Image(systemName: "photo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .tint(.primary)
+                            }
+                        }
+                        .frame(width: 75, height: 100)
+                        .overlay(alignment: .bottomTrailing) {
+                            if editBookVM.coverData != nil {
+                                Button {
+                                    editBookVM.unselectCover()
+                                } label: {
+                                    Image(systemName: "x.circle.fill")
+                                        .foregroundStyle(.red)
+                                }
+                            }
+                        }
+                    }
+                    
+                    VStack {
+                        LabeledContent {
+                            RatingComponent(currentRating: $editBookVM.rating)
+                        } label: {
+                            Text("Rating")
+                        }
+                        
+                        LabeledContent {
+                            TextField("", text: $editBookVM.title)
+                        } label: {
+                            Text("Title")
+                                .foregroundStyle(.secondary)
+                        }
+                        
+                        LabeledContent {
+                            TextField("", text: $editBookVM.author)
+                        } label: {
+                            Text("Author")
+                                .foregroundStyle(.secondary)
+                        }
+                    }
                 }
                 
                 LabeledContent {
@@ -153,6 +184,9 @@ struct EditBookView: View {
         }
         .sheet(isPresented: $showGenres) {
             GenreListView(genresVM: GenresVM(book: editBookVM.book))
+        }
+        .task(id: editBookVM.coverPhotoItem) {
+            await editBookVM.convertPhotoItem()
         }
     }
 }
